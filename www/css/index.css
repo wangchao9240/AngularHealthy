@@ -1,0 +1,44 @@
+/*------健康一问模块开始-------*/
+#ask{
+  width: 100%;
+  margin: 0px;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  /*height: 500px;*/
+  border-top: 1px solid #ddd;
+  /* background: red; */
+}                                                                                      
+#ask #ask-left{
+  padding: 0px;
+  height: 100%;
+}
+#ask #ask-left img{
+  width: 100%;
+  /*height: 100%;*/
+}
+#ask #ask-right{
+  padding: 45px 0px;
+}
+
+a{
+  text-decoration: none;
+  color: #666;
+}
+a:hover{
+  text-decoration: none;
+  color: #91CC2A;
+}
+
+#ask ul li{
+  width:50%;
+  float: left;
+  list-style:none;
+  padding: 5px;
+}
+ #ask ul li img{
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+/*------健康一问模块结束-------*/

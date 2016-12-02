@@ -1,0 +1,40 @@
+          <div class="row" ng-repeat="diseaseplaceList in diseaseplaceLists"  ng-if="$index%3 == 0">
+            <div class="col-lg-4">
+              <h2>{{diseaseplaceLists[$index].name}}</h2>
+              <h4>{{diseaseplaceLists[$index].depart}}</h4>
+             <img ng-src="{{globaVar.prefixImage}}{{diseaseplaceLists[$index].img}}" style="width: 100px;height: 100px"> 
+              <p>
+               {{diseaseplaceLists[$index].description}}
+              </p>
+             
+              <p><a class="btn btn-default" href="#/navbar/diseaseparent/diseaseDetail/{{diseaseplaceLists[$index].id}}" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+
+            <div class="col-lg-4">
+              <h2>{{diseaseplaceLists[$index+1].name}}</h2>
+              <h4>{{diseaseplaceLists[$index+1].depart}}</h4>
+             <img ng-src="{{globaVar.prefixImage}}{{diseaseplaceLists[$index+1].img}}" style="width: 100px;height: 100px"> 
+              <p>
+               {{diseaseplaceLists[$index+1].description}}
+              </p>
+              <p><a class="btn btn-default" href="#/navbar/diseaseparent/diseaseDetail/{{diseaseplaceLists[$index+1].id}}" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+
+            <div class="col-lg-4">
+              <h2>{{diseaseplaceLists[$index+2].name}}</h2>
+              <h4>{{diseaseplaceLists[$index+2].depart}}</h4>
+             <img ng-src="{{globaVar.prefixImage}}{{diseaseplaceLists[$index+2].img}}" style="width: 100px;height: 100px"> 
+              <p>
+               {{diseaseplaceLists[$index+2].description}}
+              </p>
+              
+              <p><a class="btn btn-default" href="#/navbar/diseaseparent/diseaseDetail/{{diseaseplaceLists[$index+2].id}}" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+
+          </div><!--/row-->
+          <div class="container marketing">
+            <ul class="pagination" ">
+                <li ng-repeat="pglt in pageList"><a ui-sref="navbar.diseaseparent.place({id:id,page:pglt})" ui-sref-active="acmenu">{{pglt}}</a></li>
+            </ul>
+          </div>
+

@@ -1,0 +1,12 @@
+
+            <h4>科室分类</h4> 
+  <section ng-controller="TestController">
+    <accordion>
+      <expander class='expander' ng-repeat='dc in dclassify' expander-title='dc.name'>
+       <ul>
+        <li ng-repeat='department in dc.departments'><a href="#/navbar/diseaseparent/classes/classesList/{{department.id}}/1">{{department.name}}</a></li>
+        </ul>
+      </expander>
+    </accordion>
+  </section>
+         

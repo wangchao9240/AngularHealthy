@@ -1,0 +1,78 @@
+<!-- <div class="container marketing">
+
+     
+      <div class="row" ng-repeat='employee in bookModule' ng-if='$index % 3 ==0'>
+        <div class="col-lg-4" ng-if="bookModule[$index]!=undifind">
+          <img class="img-circle" ng-src="{{globaVar.prefixImage}}{{bookModule[$index].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>{{bookModule[$index].name}}</h2>
+          <p>{{bookModule[$index].description}}</p>
+          <p><a class="btn btn-default" href="#/navbar/bookDetail/{{bookModule[$index].id}}" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4" ng-if="bookModule[$index+1]!=undifind">
+          <img class="img-circle" ng-src="{{globaVar.prefixImage}}{{bookModule[$index+1].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>{{bookModule[$index+1].name}}</h2>
+          <p>{{bookModule[$index+1].description}}</p>
+          <p><a class="btn btn-default" href="#/navbar/bookDetail/{{bookModule[$index+1].id}}" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4" ng-if="bookModule[$index+2]!=undifind">
+          <img class="img-circle" ng-src="{{globaVar.prefixImage}}{{bookModule[$index+2].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>{{bookModule[$index+2].name}}</h2>
+          <p>{{bookModule[$index+2].description}}</p>
+          <p><a class="btn btn-default" href="#/navbar/bookDetail/{{bookModule[$index+2].id}}" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+      <nav>
+  		<ul class="pagination">
+    	<li ng-repeat="page in pageList"><a href="#/navbar/bookList/{{id}}/{{page}}">{{page}}</a></li>
+  		</ul>
+	</nav>
+</div>  -->
+
+
+<div class="container marketing">
+     
+      <!-- Three columns of text below the carousel -->
+      <div class="row" ng-repeat="book in bookLists" ng-if="$index % 4 == 0">
+        <div class="col-lg-3" ng-if="bookLists[$index].id != undefined">
+          <!-- {{$index}} {{$index+1}}  {{$index+2}} -->
+          <img class="list_img" ng-src="{{globaVar.prefixImage}}{{bookLists[$index].img}}" alt="{{bookLists[$index].name}}" style="width: 140px; height: 140px;">
+          <h3>{{bookLists[$index].name}}</h3><i class="book_span">作者：{{bookLists[$index].author}}</i>
+          <p class="list_p">{{bookLists[$index].summary | limitTo:75}}</p>
+          <p><a class="btn btn-default" href="#/navbar/bookDetail/{{bookLists[$index].id}}" role="button">查看详情 &raquo;</a></p>
+        </div><!-- /.col-lg-3 -->
+
+        <div class="col-lg-3" ng-if="bookLists[$index+1].id != undefined">
+          <img class="list_img" ng-src="{{globaVar.prefixImage}}{{bookLists[$index+1].img}}" alt="{{bookLists[$index+1].name}}" style="width: 140px; height: 140px;">
+          <h3>{{bookLists[$index+1].name}}</h3><i class="book_span">作者：{{bookLists[$index+1].author}}</i>
+          <p class="list_p">{{bookLists[$index+1].summary | limitTo:75}}</p>
+          <p><a class="btn btn-default" href="#/navbar/bookDetail/{{bookLists[$index+1].id}}" role="button">查看详情 &raquo;</a></p>
+        </div><!-- /.col-lg-3 -->
+      
+        <div class="col-lg-3" ng-if="bookLists[$index+2].id != undefined">
+          <img class="list_img" ng-src="{{globaVar.prefixImage}}{{bookLists[$index+2].img}}" alt="{{bookLists[$index+2].name}}" style="width: 140px; height: 140px;">
+          <h3>{{bookLists[$index+2].name}}</h3><i class="book_span">作者：{{bookLists[$index+2].author}}</i>
+          <p class="list_p">{{bookLists[$index+2].summary | limitTo:75}}</p>
+          <p><a class="btn btn-default" href="#/navbar/bookDetail/{{bookLists[$index+2].id}}" role="button">查看详情 &raquo;</a></p>
+        </div><!-- /.col-lg-3 -->
+
+        <div class="col-lg-3" ng-if="bookLists[$index+3].id != undefined">
+          <img class="list_img" ng-src="{{globaVar.prefixImage}}{{bookLists[$index+3].img}}" alt="{{bookLists[$index+2].name}}" style="width: 140px; height: 140px;">
+          <h3>{{bookLists[$index+3].name}}</h3><i class="book_span">作者：{{bookLists[$index+3].author}}</i>
+          <p class="list_p">{{bookLists[$index+3].summary | limitTo:75}}</p>
+          <p><a class="btn btn-default" href="#/navbar/bookDetail/{{id}}" role="button">查看详情 &raquo;</a></p>
+        </div><!-- /.col-lg-3 -->
+        
+          
+      </div><!-- /.row -->
+
+      <nav>
+        <ul class="pagination">
+          <li ng-repeat="page in pageList">
+            <!-- <a href="#/navbar/foodList/{{id}}/{{page}}">{{page}}</a> -->
+            <a href="#/navbar/bookList/{{id}}/{{page}}">{{page}}</a>
+
+          </li>
+        </ul>
+      </nav>
+
+</div>    

@@ -1,0 +1,21 @@
+<div class="container marketing" style="margin-top: 50px">
+      <div class="row">
+        <div class="col-lg-4">
+          <center><img ng-src="{{globaVar.prefixImage}}{{bookDetail.img}}" alt="{{bookDetail.name}}"></center>
+         <h2><b><center>{{bookDetail.name}}</center></b></h2>
+          	<p><b><center>作者</b>：{{bookDetail.author}}</center></p>
+        </div>
+        <div class="col-lg-4">
+          
+           <h3><b>作品概述：</b></h3>
+            <pre style="text-align:justify;display:inline-block;white-space: pre-wrap;background-color: transparent;border:0px;font-size: 14px">{{bookDetail.summary}}</pre>
+        </div>
+        
+
+        <!-- {{bookDetail.list}} -->
+      
+        </div>
+</div>
+ <div ng-repeat="book in bookDetail.list">
+			<div compile="book.message">{{book.message}}</div>
+		 </div>

@@ -1,0 +1,29 @@
+<div class="container marketing">
+
+     
+      <div class="row" ng-repeat='employee in foodModule' ng-if='$index % 3 ==0'>
+        <div class="col-lg-4" ng-if="foodModule[$index]!=undifind">
+          <img class="img-circle" ng-src="{{globaVar.prefixImage}}{{foodModule[$index].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>{{foodModule[$index].name}}</h2>
+          <p>{{foodModule[$index].description}}</p>
+          <p><a class="btn btn-default" href="#/navbar/foodDetail/{{foodModule[$index].id}}" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4" ng-if="foodModule[$index+1]!=undifind">
+          <img class="img-circle" ng-src="{{globaVar.prefixImage}}{{foodModule[$index+1].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>{{foodModule[$index+1].name}}</h2>
+          <p>{{foodModule[$index+1].description}}</p>
+          <p><a class="btn btn-default" href="#/navbar/foodDetail/{{foodModule[$index+1].id}}" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4" ng-if="foodModule[$index+2]!=undifind">
+          <img class="img-circle" ng-src="{{globaVar.prefixImage}}{{foodModule[$index+2].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>{{foodModule[$index+2].name}}</h2>
+          <p>{{foodModule[$index+2].description}}</p>
+          <p><a class="btn btn-default" href="#/navbar/foodDetail/{{foodModule[$index+2].id}}" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+      <nav>
+  		<ul class="pagination">
+    	<li ng-repeat="page in pageList"><a href="#/navbar/foodList/{{id}}/{{page}}">{{page}}</a></li>
+  		</ul>
+	</nav>
+</div>      

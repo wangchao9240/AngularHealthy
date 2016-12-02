@@ -1,0 +1,65 @@
+
+<div class="container marketing">
+ 
+ 
+
+
+   <div class="row" ng-repeat='info in infoLists' ng-if='$index % 3==0' style="padding-top:20px " >
+        <div class="col-lg-4 row featurette" ng-if="infoLists[$index].id!=undefined" >
+
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive img-rounded" lazy-src="{{globaVar.prefixImage}}{{infoLists[$index].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+        </div>
+        <div class="col-md-7">
+          <h4 class="featurette-heading" style="font-weight: bold;" >{{infoLists[$index].title|limitTo:16}}... </h4>
+          <p class="lead" style="font-size: 15px;text-indent: 30px">{{infoLists[$index].description|limitTo:45}}...</p>
+           <p ><a  class="btn btn-default" href="#/navbar/infoDetail/{{infoLists[$index].id}}" role="button" >查看详情 &raquo;</a></p>
+
+        </div>
+     
+
+        </div>
+         <div class="col-lg-4" ng-if="infoLists[$index+1].id!=undefined" >
+          <div class="col-md-5">
+          <img class="featurette-image img-responsive img-rounded" lazy-src="{{globaVar.prefixImage}}{{infoLists[$index+1].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+        </div>
+        <div class="col-md-7">
+          <!-- <h2 class="featurette-heading">{{infoLists[$index+1].title}} </h2> -->
+           <h4 class="featurette-heading" style="font-weight: bold;" >{{infoLists[$index+1].title|limitTo:16}}... </h4>
+          <p class="lead" style="font-size: 15px;text-indent: 30px">{{infoLists[$index+1].description|limitTo:45}}...</p>
+           <p><a class="btn btn-default" href="#/navbar/infoDetail/{{infoLists[$index+1].id}}" role="button">查看详情 &raquo;</a></p>
+        </div>
+        </div>
+         <div class="col-lg-4" ng-if="infoLists[$index+2].id!=undefined">
+         <div class="col-md-5">
+          <img class="featurette-image img-responsive img-rounded" lazy-src="{{globaVar.prefixImage}}{{infoLists[$index+2].img}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+        </div>
+        <div class="col-md-7">
+          <!-- <h2 class="featurette-heading">{{infoLists[$index+2].title}} </h2> -->
+           <h4 class="featurette-heading" style="font-weight: bold;">{{infoLists[$index+2].title|limitTo:16}}... </h4>
+          <p class="lead" style="font-size: 15px;text-indent: 30px">{{infoLists[$index+2].description|limitTo:45}}...</p>
+           <p><a class="btn btn-default" href="#/navbar/infoDetail/{{infoLists[$index+2].id}}" role="button">查看详情 &raquo;</a></p>
+        </div>
+        </div>
+       
+      </div>
+
+
+ 
+    <nav>
+    <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li ng-repeat="page in pageList">
+      <a href="#/navbar/infoList/{{id}}/{{page}}">{{page}}</a>
+       <!-- <a ui-sref="navbar.infoList({id:id,page:page})" ui-sref-active="active">{{page}}</a> -->
+
+
+      </li> 
+      
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </nav>  
+       
+
+</div>
+

@@ -1,0 +1,70 @@
+ <body ng=app='foodModule'>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">健康大杂烩</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                 <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">健康资讯 <span class="caret"></span></a>
+                  <ul class="dropdown-menu"  role="menu">
+                    <li ng-repeat='infoList in infocategories'><a href="#/navbar/infoList/{{infoList.id}}/1">{{infoList.name}}</a></li>
+
+                   
+                  </ul>
+                </li>
+                 <li><a href="#/navbar/ask/askLists/1/1">健康一问</a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">健康图书 <span class="caret"></span></a>
+                  <ul class="dropdown-menu"  role="menu">
+                    <li ng-repeat='employee in booksList'><a href="#/navbar/bookList/{{employee.id}}/1">{{employee.name}}</a></li>
+                   
+                  </ul>
+                </li>
+                <li><a href="#navbar/diseaseparent/classes/classesList/2/1">常见疾病</a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">菜品分类 <span class="caret"></span></a>
+                  <ul class="dropdown-menu"  role="menu">
+                    <li ng-repeat='employee in employees'><a href="#/navbar/foodList/{{employee.id}}/1">{{employee.name}}</a></li>
+                   
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+   
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    
+
+      <!-- /END THE FEATURETTES -->
+      <div class="container marketing">
+        <ui-view></ui-view>
+      </div>
+      <!-- FOOTER -->
+      <div class="container marketing">
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+     </div><!-- /.container -->    

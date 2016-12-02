@@ -1,0 +1,14 @@
+
+<!-- diseasePclassifyCategories的显示层，改过 -->
+
+<section ng-controller="TestController">
+    <accordion>
+    <h4>身体分类</h4>
+      <expander class='expander' ng-repeat='bodyList in bodyLists' expander-title='bodyList.name'>
+        <!-- {{expander.text}} -->
+
+              <p ng-repeat='place in bodyList.places'><a href="#/navbar/diseaseparent/classes/place/{{place.id}}/1">{{place.name}}</a></p>
+
+      </expander>
+    </accordion>
+  </section>

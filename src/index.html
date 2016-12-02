@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="v">
+
+    <style type="text/css">
+        .active_page{
+            background-color: red!important;
+            color: white!important;
+        }
+        .book_span{
+            width: 100px!important;
+            height: 100px!important;
+            color: red;
+        }
+        .list_img{
+            box-shadow: 0px 0px 5px black;
+        }
+        .list_p{
+            -webkit-line-clamp:4;
+            -webkit-box-orient:vertical;
+            display: -webkit-box;
+            overflow: hidden;      
+        }
+        .expander {
+          width: 250px;
+        }
+
+        .expander>.ex-title {
+          background-color:white;
+          color: #333;
+          cursor: pointer;
+        }
+        p{margin: 0;}
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/ask.css">
+    <link rel="stylesheet" type="text/css" href="css/askdetail.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body ng-app='foodModule'>
+<!-- NAVBAR
+================================================== -->
+ 
+	<ui-view></ui-view>
+
+ 	
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/docs.min.js"></script> -->
+
+    <script type="text/javascript" src='js/angular.js'></script>
+    <script type="text/javascript" src='js/angular-ui-router.js'></script>
+    <script type="text/javascript" src='js/index.js'></script>
+    <script type="text/javascript" src='js/angular-sanitize.js'></script>
+    <script type="text/javascript" src='js/me-lazyload.js'></script>
+    <script type="text/javascript">
+    	
+    </script>
+  </body>
+</html>

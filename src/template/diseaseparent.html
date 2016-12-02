@@ -1,0 +1,16 @@
+ <div class="container">
+      
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12">
+          <div ui-view="detail"></div>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <div ui-view="lists"></div>
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div ui-view="classes1"></div>
+          <div ui-view="classes2"></div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+    </div>

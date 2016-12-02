@@ -1,0 +1,75 @@
+
+<!-- 首页疾病 -->
+<hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="img/disease.jpg" alt="Generic placeholder image" style="width: 100%;height: 440px;">
+        </div>
+        <div class="col-md-7">
+          <div class="col-xs-4" ng-repeat="disease in diseases">
+            <img class="img-circle" ng-src="{{globaVar.prefixImage}}{{disease.img}}" alt="{{disease.name}}" style="width: 140px; height: 140px;">
+            <h4>{{disease.name}}</h4>
+            <p><a class="btn btn-default" href="#/navbar/diseaseDetail/{{disease.id}}" role="button">查看详情 &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+<hr class="featurette-divider">
+
+<!-- 首页健康咨询 -->
+<div class="row featurette">
+  <div class="col-md-5">
+    <a href='#/navbar/infoList/1/1'>
+    <img class="featurette-image img-responsive" src="img/20150710093947634.jpg" width="400" height="400" alt="Generic placeholder image"></a>
+  </div>
+  <div class="col-md-7">
+    <div class="row" ng-repeat="info in infos.tngou | limitTo: 6" ng-if='$index % 3 ==0'>
+      <div class="col-md-4">
+        <div class="col-md-12">
+          <a ui-sref="navbar.infoDetail({id: infos.tngou[$index].id})">
+            <img ng-src="{{globaVar.prefixImage}}{{infos.tngou[$index].img}}" width="100%">
+          </a>
+          <a ui-sref="navbar.infoDetail({id: infos.tngou[$index].id})">
+            <h5 class="featurette-heading">{{infos.tngou[$index].title}}</h5>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="col-md-12">
+          <a ui-sref="navbar.infoDetail({id: infos.tngou[$index+1].id})">
+            <img ng-src="{{globaVar.prefixImage}}{{infos.tngou[$index+1].img}}" width="100%">
+          </a>
+          <a ui-sref="navbar.infoDetail({id: infos.tngou[$index+1].id})">
+            <h5 class="featurette-heading">{{infos.tngou[$index+1].title}}</h5>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="col-md-12">
+          <a ui-sref="navbar.infoDetail({id: infos.tngou[$index+2].id})">
+            <img ng-src="{{globaVar.prefixImage}}{{infos.tngou[$index+2].img}}" width="100%">
+          </a>
+          <a ui-sref="navbar.infoDetail({id: infos.tngou[$index+2].id})">
+            <h5 class="featurette-heading">{{infos.tngou[$index+2].title}}</h5>
+          </a>
+        </div>
+      </div>     
+    </div>
+  </div>
+</div>
+
+<!-- 首页健康一问 -->
+<hr class="featurette-divider">
+<h2>健康一问</h2>
+<div id="ask" class="row container marketing">
+  <div id="ask-left" class="col-xs-3">
+    <img src="../img/ask.jpg" alt="">
+  </div>
+  <div id="ask-right" class="col-xs-9">
+    <ul>
+        <li ng-repeat="asknew in askNewsList"><img src="../img/wd9.jpg"><a ui-sref="navbar.ask.askDetail({id:asknew.id})">{{asknew.title}}</a></li>
+    </ul>
+  </div>
+</div>

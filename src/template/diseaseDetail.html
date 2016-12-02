@@ -1,0 +1,15 @@
+<h3>{{diseaseDetail.name}}</h3>
+<img ng-src="{{globaVar.prefixImage}}{{diseaseDetail.img}}" style="width: 50%;">
+<p><b>描述</b>：{{diseaseDetail.description}}</p>
+<p><b>病情：</b>{{diseaseDetail.disease}}</p>
+<div compile="diseaseDetail.diseasetext"></div>
+<p><b>症状：</b>{{diseaseDetail.symptom}}</p>
+<div compile="diseaseDetail.symptomtext"></div>
+<p><b>检查方式：</b>{{diseaseDetail.checks}}</p>
+<div compile="diseaseDetail.checktext"></div>
+<p><b>治疗方式：</b>{{diseaseDetail.drug}}</p>
+<div compile="diseaseDetail.drugtext"></div>
+<p><b>食疗方式：</b>{{diseaseDetail.food}}</p>
+<div compile="diseaseDetail.foodtext"></div>
+<p><b>关键字：</b>{{diseaseDetail.keywords}}</p>
+<p><b>链接：</b><a href="{{diseaseDetail.url}}">{{diseaseDetail.url}}</p>
